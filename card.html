@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://code.visualstudio.com/assets/images/code-stable-white.png">
+    <title>CARD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
+
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            background: linear-gradient(#080808 0%, #ebe8e8 100%);
+        }
+
+
+        .titleFGB {
+            font-weight: normal;
+            font-size: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .item23-list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .anh3nen {
+            max-width: 100%;
+            height: auto;
+            border-style: none;
+        }
+
+        #main12 {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #prev,
+        #next {
+            font-size: 4rem;
+            color: #F4F4F4;
+        }
+
+        #slider {
+            position: relative;
+            width: 15rem;
+            height: 22rem;
+        }
+
+        /*Card style general*/
+        .cardZXC {
+            width: 14rem;
+            font-family: "Fira Sans", sans-serif;
+            position: absolute;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            background-color: #ffffff;
+            transition: all 0.5s;
+            border-radius: 10px;
+        }
+
+        .card-header {
+            text-align: center;
+            padding: 1.5rem 1.2rem;
+            border-radius: 10px;
+        }
+
+        .card-header .titleFGB {
+            color: rgb(0, 0, 0);
+            font-size: 1.5rem;
+            font-weight: 700;
+
+        }
+
+        .card-header .time {
+            color: #de0808;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .item23-list {
+            text-align: center;
+        }
+
+        .item23-list .item23 {
+            padding: 0.7rem 0;
+            font-size: 0.8rem;
+            color: #757575;
+        }
+
+        .item23-list .item23:nth-child(odd) {
+            background-color: #F4F4F4;
+        }
+
+        .item23-list .item23:nth-child(even) {
+            background-color: #fff;
+        }
+
+        .btn {
+            display: inline-block;
+            color: white;
+            text-transform: uppercase;
+            padding: 0.5rem 0.9rem;
+        }
+
+        /*Cards Style*/
+        .Premium {
+            background-color: #ffffff;
+        }
+
+        .standard {
+            background-color: #ffffff;
+        }
+
+        .basic {
+            background-color: #ffffff;
+        }
+
+        /*Class position cards*/
+        .frontX {
+            transform: translateX(0rem) scale(1.1);
+            z-index: 20;
+        }
+
+        .frontX:hover {
+            cursor: pointer;
+            transform: translateX(0rem) scale(1.2);
+        }
+
+        .leftX {
+            transform: translateX(-10rem);
+            z-index: 15;
+        }
+
+        .leftX:hover {
+            cursor: pointer;
+            transform: translateX(-10rem) scale(1.2);
+            z-index: 25;
+        }
+
+        .rightX {
+            transform: translateX(10rem);
+            z-index: 10;
+        }
+
+        .rightX:hover {
+            cursor: pointer;
+            transform: translateX(10rem) scale(1.2);
+            z-index: 25;
+        }
+
+        * {
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: .2s linear;
+        }
+
+        .header {
+            background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 7%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+
+        }
+
+        .header .logo {
+            font-size: xx-large;
+            font-family: sans-serif;
+            color: #ffffff;
+            font-weight: 1000;
+
+        }
+
+        .header .navbar a {
+            margin: 0 1rem;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2rem;
+            overflow-x: hidden;
+            scroll-padding-top: 9rem;
+            scroll-behavior: smooth;
+            transition: 0.5s;
+        }
+
+        .TC {
+            background-color: #de0808;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .header .navbar a:hover {
+            color: black;
+            background-color: #ffffff;
+            padding: 10px;
+            padding-bottom: .5rem;
+            padding-top: .5rem;
+            border-radius: 5px;
+            transition: 0.5s;
+        }
+
+
+        @media only screen and (max-width: 300px) {
+            .cardZXC {
+                width: 5rem;
+            }
+
+            .card-header .time {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <label for=""> LOGO </label>
+        </a>
+        <nav class="navbar">
+            <a href="#" class="TC">home</a>
+            <a href="#">about</a>
+            <a href="#">menu</a>
+            <a href="#">products</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+            <a href="#">blogs</a>
+        </nav>
+    </header>
+    <div id="main12">
+        <div>
+            <img width="120px" src="https://code.visualstudio.com/assets/images/code-stable-white.png" alt="">
+        </div>
+        <div id="slider">
+            <div class="cardZXC frontX">
+                <div class="card-header standard">
+                    <h2 class="titleFGB"><img src="/img/icon.svg" alt=""> Standard</h2>
+                    <strong class="price">220,000₫</strong><span class="time">/Month</span>
+                </div>
+                <ul class="item23-list">
+                    <img class="anh3nen" style="border-radius: 8px;"
+                        src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/01/29/89781672.jpg" alt="">
+                </ul>
+            </div>
+            <div class="cardZXC leftX">
+                <div class="card-header basic">
+                    <h2 class="titleFGB"><img src="/img/icon.svg" alt=""> Basic</h2>
+                    <strong class="price">180,000₫</strong><span class="time">/Month</span>
+                </div>
+                <ul class="item23-list">
+                    <img class="anh3nen" style="border-radius: 8px;"
+                        src="https://s199.imacdn.com/ta/2021/09/25/1ad5a8a0b970ec48_8650ef13e6b54669_32334216325861751185710.jpg"
+                        alt="">
+                </ul>
+            </div>
+            <div class="cardZXC rightX">
+                <div class="card-header Premium">
+                    <h2 class="titleFGB"><img src="/img/icon.svg" alt=""> Premium</h2>
+                    <strong class="price">260,000₫</strong><span class="time">/Month</span>
+                </div>
+                <ul class="item23-list">
+                    <img class="anh3nen" style="border-radius: 8px;"
+                        src="https://ecdn.game4v.com/g4v-content/uploads/2022/07/30120055/Chainsaw-anime-1-game4v-1659157253-90.png"
+                        alt="">
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
